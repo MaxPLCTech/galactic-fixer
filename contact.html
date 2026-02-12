@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Galactic Fixer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400;700;900&family=Michroma&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="grid-background"></div>
+    <div class="gradient-overlay"></div>
+    
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.jpeg" alt="Galactic Fixer" class="logo-img">
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">HOME</a>
+                <a href="services.html" class="nav-link">SERVICES</a>
+                <a href="contact.html" class="nav-link active">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="page-title">
+                    <span class="title-line-accent"></span>
+                    CONTACT US
+                    <span class="title-line-accent"></span>
+                </h1>
+                <p class="page-subtitle">Let's get your project started</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2 class="contact-info-title">GET IN TOUCH</h2>
+                        <p class="contact-intro">Ready to get your repairs done right? Reach out and we'll get started on your project.</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-detail">
+                                <div class="detail-icon">
+                                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="3"/>
+                                        <path d="M 35,40 L 50,55 L 65,40" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                                        <rect x="30" y="35" width="40" height="30" fill="none" stroke="currentColor" stroke-width="3"/>
+                                    </svg>
+                                </div>
+                                <div class="detail-content">
+                                    <h3>Email</h3>
+                                    <p>info@galacticfixer.com</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail">
+                                <div class="detail-icon">
+                                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="3"/>
+                                        <path d="M 35,35 Q 45,45 50,50 Q 55,45 65,35" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                                        <path d="M 50,50 Q 45,55 35,65" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                                        <path d="M 50,50 Q 55,55 65,65" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+                                <div class="detail-content">
+                                    <h3>Phone</h3>
+                                    <p>(555) GALACTIC</p>
+                                    <p class="detail-note">Available 24/7</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail">
+                                <div class="detail-icon">
+                                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="3"/>
+                                        <circle cx="50" cy="45" r="15" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                                        <path d="M 30,75 Q 50,60 70,75" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                                    </svg>
+                                </div>
+                                <div class="detail-content">
+                                    <h3>Service Area</h3>
+                                    <p>Serving the entire galaxy</p>
+                                    <p class="detail-note">And your neighborhood</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hours-box">
+                            <h3>HOURS OF OPERATION</h3>
+                            <div class="hours-grid">
+                                <span>Monday - Friday</span>
+                                <span>8:00 AM - 6:00 PM</span>
+                                <span>Saturday</span>
+                                <span>9:00 AM - 4:00 PM</span>
+                                <span>Sunday</span>
+                                <span>Emergency Only</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-header">
+                                <h2>REQUEST A QUOTE</h2>
+                                <p>Fill out the form below and we'll respond quickly</p>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="service">Service Needed</label>
+                                <select id="service" name="service">
+                                    <option value="">Select a service...</option>
+                                    <option value="electrical">Electrical Systems</option>
+                                    <option value="plumbing">Plumbing Solutions</option>
+                                    <option value="carpentry">Carpentry & Woodwork</option>
+                                    <option value="painting">Painting & Finishing</option>
+                                    <option value="maintenance">Home Maintenance</option>
+                                    <option value="assembly">Assembly & Installation</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Project Details *</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project..."></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="urgency">Urgency Level</label>
+                                <select id="urgency" name="urgency">
+                                    <option value="routine">Routine - Within 2 weeks</option>
+                                    <option value="soon">Soon - Within a week</option>
+                                    <option value="urgent">Urgent - Within 48 hours</option>
+                                    <option value="emergency">Emergency - ASAP</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-large">SEND REQUEST</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="logo.jpeg" alt="Galactic Fixer" class="footer-logo-img">
+                    <p class="footer-tagline">Professional Handyman Services</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Galactic Fixer. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,64 +1,137 @@
-# Astro Starter Kit: Blog
+# Galactic Fixer Website
 
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudflare/templates/tree/main/astro-blog-starter-template)
+A synthwave/outrun-themed handyman website with neon aesthetics inspired by 1980s sci-fi and retro-futurism.
 
-![Astro Template Preview](https://github.com/withastro/astro/assets/2244813/ff10799f-a816-4703-b967-c78997e8323d)
+## Files Included
 
-<!-- dash-content-start -->
+- `index.html` - Home page with animated neon elements
+- `services.html` - Services page with all handyman offerings
+- `contact.html` - Contact page with form
+- `styles.css` - Complete synthwave styling with neon effects
+- `script.js` - JavaScript for interactivity
+- `logo.jpeg` - Your Galactic Fixer logo
 
-Create a blog with Astro and deploy it on Cloudflare Workers as a [static website](https://developers.cloudflare.com/workers/static-assets/).
+## Design Features
 
-Features:
+- 🌟 **Synthwave Aesthetic**: Teal, cyan, hot pink, and purple neon colors
+- ⚡ **Animated Grid Background**: Tron-style perspective grid
+- 🌌 **Starfield Animation**: Parallax moving stars
+- 💫 **Neon Glow Effects**: On all buttons, borders, and text
+- 🎨 **Gradient Text**: Smooth color transitions matching your logo
+- 📱 **Fully Responsive**: Works on all devices
+- ✨ **Smooth Animations**: Hover effects and transitions throughout
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
-- ✅ Built-in Observability logging
+## Color Palette
 
-<!-- dash-content-end -->
+Extracted from your logo:
+- **Cyan/Teal**: #00FFD9, #00D4FF
+- **Hot Pink/Magenta**: #FF006E, #FF0080
+- **Purple**: #8B00FF, #A855F7
+- **Dark Background**: #0A0E27, #050714
 
-## Getting Started
+## Typography
 
-Outside of this repo, you can start a new project with this template using [C3](https://developers.cloudflare.com/pages/get-started/c3/) (the `create-cloudflare` CLI):
+- **Display Font**: Audiowide (for main titles)
+- **Title Font**: Orbitron (for headings)
+- **Body Font**: Michroma (for text)
 
-```bash
-npm create cloudflare@latest -- --template=cloudflare/templates/astro-blog-starter-template
+## Deploying to Cloudflare Pages
+
+### Method 1: Direct Upload
+
+1. Go to Cloudflare Dashboard → **Workers & Pages**
+2. Click **Create application** → **Pages** → **Upload assets**
+3. Upload ALL files:
+   - index.html
+   - services.html
+   - contact.html
+   - styles.css
+   - script.js
+   - logo.jpeg
+4. Click **Deploy site**
+
+### Method 2: Git Integration
+
+1. Create a new GitHub repository
+2. Upload all files to the repository
+3. In Cloudflare Pages:
+   - Click **Create application** → **Pages** → **Connect to Git**
+   - Select your repository
+   - Build settings:
+     - **Build command**: (leave empty)
+     - **Build output directory**: `/`
+   - Click **Save and Deploy**
+
+## Customization
+
+### Update Contact Info
+
+In `contact.html`, update:
+```html
+<p>info@galacticfixer.com</p>
+<p>(555) GALACTIC</p>
 ```
 
-A live public deployment of this template is available at [https://astro-blog-starter-template.templates.workers.dev](https://astro-blog-starter-template.templates.workers.dev)
+### Modify Services
 
-## 🚀 Project Structure
+Edit the service items in `services.html` to match your actual offerings.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### Adjust Colors
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+In `styles.css`, modify the CSS variables:
+```css
+:root {
+    --color-cyan: #00FFD9;
+    --color-pink: #FF006E;
+    --color-purple: #8B00FF;
+    /* ... */
+}
+```
 
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
+## Contact Form Backend
 
-Any static assets, like images, can be placed in the `public/` directory.
+The form currently shows an alert. To make it functional:
 
-## 🧞 Commands
+### Option 1: Cloudflare Workers
+Create a serverless function to handle form submissions.
 
-All commands are run from the root of the project, from a terminal:
+### Option 2: Third-Party Service
+Use services like:
+- **Formspree**: `<form action="https://formspree.io/f/YOUR_ID" method="POST">`
+- **Web3Forms**: Free, no backend needed
+- **EmailJS**: Client-side email sending
 
-| Command                           | Action                                           |
-| :-------------------------------- | :----------------------------------------------- |
-| `npm install`                     | Installs dependencies                            |
-| `npm run dev`                     | Starts local dev server at `localhost:4321`      |
-| `npm run build`                   | Build your production site to `./dist/`          |
-| `npm run preview`                 | Preview your build locally, before deploying     |
-| `npm run astro ...`               | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help`         | Get help using the Astro CLI                     |
-| `npm run build && npm run deploy` | Deploy your production site to Cloudflare        |
-| `npm wrangler tail`               | View real-time logs for all Workers              |
+### Option 3: Custom Backend
+Update `script.js`:
+```javascript
+fetch('YOUR_API_ENDPOINT', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(formData)
+})
+```
 
-## 👀 Want to learn more?
+## Browser Support
 
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- ✅ Chrome/Edge (latest)
+- ✅ Firefox (latest)
+- ✅ Safari (latest)
+- ✅ Mobile browsers
 
-## Credit
+## Performance Features
 
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+- Optimized animations (CSS-only where possible)
+- Smooth 60fps effects
+- Efficient starfield rendering
+- Backdrop blur with hardware acceleration
+
+## Easter Eggs
+
+Try the Konami code on your keyboard:
+↑ ↑ ↓ ↓ ← → ← → B A
+
+---
+
+**Built with synthwave vibes** 🌆✨
+
+For questions or support, contact: your@email.com
